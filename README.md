@@ -39,7 +39,7 @@ El repositorio está organizado de la siguiente manera:
 
 Para utilizar el generador de conjuntos de datos, sigue las instrucciones detalladas en la documentación proporcionada en el directorio 'docs'. Asegúrate de cumplir con todas las regulaciones y requisitos legales aplicables antes de utilizar este software en un entorno de producción.
 
-[] TODO
+[ ] TODO
 
 ## Contribución
 
