@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto, titulado TFG-XAIpipeline, se enfoca en el desarrollo de una herramienta para generar conjuntos de datos destinados a alimentar sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la legislación europea relacionada con la protección de datos y la equidad en el procesamiento automatizado de decisiones. Con este proyecto se pretende hacer uso de la inteligencia artificial de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ 
+Este proyecto, titulado TFG-XAIpipeline, se enfoca en el desarrollo de una herramienta para generar conjuntos de datos destinados a alimentar sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la legislación europea relacionada con la protección de datos y la equidad en el procesamiento automatizado de decisiones. Con este proyecto se pretende hacer uso de la inteligencia artificial de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ para construir un sistema de alto riesto **ético, legal y transparente**.
 
 ## Objetivos
 
@@ -43,9 +43,10 @@ Para utilizar el generador de conjuntos de datos, sigue las instrucciones detall
 
 ## Contribución
 
-Codirector del Trabajo de fin de master: Francisco Herrera es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’. _1
+Codirector del Trabajo de fin de master: Francisco Herrera[^1] es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’.
 
-Coddirector del Trabajo de fin de master: Pablo García Bringas es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación. _2
+Coddirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
 
-^1 . https://www.ugr.es/personal/francisco-herrera-triguero
-^2 . https://deustotech.deusto.es/member/garcia-bringas-pablo/ 
+[^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
+[^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
+
