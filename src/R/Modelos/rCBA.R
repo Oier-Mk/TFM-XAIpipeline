@@ -11,35 +11,55 @@
 #   Vector of 3 elements containing the best support, confidence, and accuracy found during the grid search.
 #   The first element is the best support value, the second element is the best confidence value, and the third element is the accuracy associated with these values.
 # 
-grid_search <- function(support_values, confidence_values, train, test, y_test) {
-  ## Initialize variables to store the best parameters and accuracy
-  best_support <- NULL
-  best_confidence <- NULL
-  best_accuracy <- 0
-
-  ## Grid search loop
+grid_search <- function(train, test, y_test, support_values, confidence_values, train_weights = NULL, test_weights = NULL) {
+  # Inicializar variables para almacenar los mejores parámetros y precisión
+  best_params <- list()
+  
+  # Búsqueda en cuadrícula para cada valor de soporte
   for (support in support_values) {
+    # Búsqueda en cuadrícula para cada valor de confianza
     for (confidence in confidence_values) {
-      ## Train the classifier
-      classifier <- CBA(duration ~ ., data = train, supp = support, conf = confidence)
 
-      ## Make predictions on validation set
-      predictions <- predict(classifier, test)
+      print(paste("Support:", support, "Confidence:", confidence))
 
+      # Convertir el conjunto de datos de entrenamiento en transacciones
+      trans <- as(train, "transactions")
+      
+      # Crear la base de reglas con CARs (Classification Association Rules)
+      cars <- mineCARs(Class ~ ., trans, parameter = list(support = support, confidence = confidence))
+      
+      # Eliminar reglas redundantes
+      cars <- cars[!is.redundant(cars)]
+      
+      # Ordenar las reglas por confianza
+      cars <- sort(cars, by = "conf")
+      
+      # Ajustar el modelo con pesos y las reglas
+      classifier <- CBA_ruleset(Class ~ .,
+                                 rules = cars,
+                                 default = uncoveredMajorityClass(Class ~ ., trans, cars),
+                                 method = "majority",
+                                 weights = train_weights)
+      
+      # Calcular la precisión del modelo
+      trans_test <- as(test, "transactions")
+      predictions <- predict(classifier, trans_test, weights = test_weights)
       accuracy <- sum(predictions == y_test) / length(predictions)
       
-      ## Update best parameters if current accuracy is higher
-      if (accuracy > best_accuracy) {
-        best_support <- support
-        best_confidence <- confidence
-        best_accuracy <- accuracy
+      # Almacenar los mejores parámetros y precisión
+      if (is.null(best_params$accuracy) || accuracy > best_params$accuracy) {
+        best_params$support <- support
+        best_params$confidence <- confidence
+        best_params$accuracy <- accuracy
       }
     }
   }
   
-  ## Return vector of best parameters and accuracy
-  c(best_support, best_confidence, best_accuracy)
+  # Devolver los mejores parámetros y precisión encontrados
+  return(best_params)
 }
+
+
 # # Example values for the grid search
 # support_values <- seq(0.01, 0.1, by = 0.01)
 # confidence_values <- seq(0.01, 0.1, by = 0.01)

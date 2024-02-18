@@ -31,44 +31,33 @@ confusion_matrix <- function(predictions, y_test) {
 # Returns:
 #   List containing the best parameters found during grid search for each objective function and their associated accuracies
 # 
-grid_search <- function(X_train, y_train, X_test, y_test, objective_functions, nrounds_values, w_train = NULL, w_test = NULL) {
-  # Initialize variables to store the best parameters and accuracy for each objective function
+grid_search <- function(X_train, y_train, X_test, y_test, objective_functions, nrounds_values, train_weights = NULL, test_weights = NULL) {
+  # Inicializar variables para almacenar los mejores parámetros y precisión
   best_params <- list()
   
-  # Grid search loop for each objective function
+  # Búsqueda en cuadrícula para cada valor de soporte
   for (objective in objective_functions) {
-    # Initialize variables to store the best parameters and accuracy for the current objective function
-    best_nrounds <- NULL
-    best_accuracy <- 0
-    
-    # Grid search loop for number of boosting rounds
+    # Búsqueda en cuadrícula para cada valor de confianza
     for (nrounds in nrounds_values) {
 
-      # FIXME Check failed: info.labels.Size() == preds.Size() (700 vs. 1400) : Invalid shape of labels.
-      print(nrow(X_train))
-      print(length(y_train))
-      print(nrow(X_test))
-      print(length(y_test))
-
-      # Train the XGBoost model
-      xgb_model <- xgboost(data = X_train, label = y_train, nrounds = nrounds, objective = objective, num_class = 2, weight = w_train)
-      # Make predictions on test set
-      predictions <- predict(xgb_model, newdata = X_test, weights = w_test)      
-      # Calculate accuracy
-      accuracy <- sum(predictions == y_test) / length(y_test)  # Use length(y_test) instead of length(predictions)
+      # xgb_model <- xgboost(data = X_train, label = y_train, nrounds = nrounds, objective = objective, num_class = 2, weight = w_train)
+      # predictions <- predict(xgb_model, newdata = X_test, weights = w_test)
+      xgb_model <- xgboost(data = X_train, label = y_train, nrounds = nrounds, objective = objective, num_class = 2, weight = train_weights)
       
-      # Update best parameters if current accuracy is higher
-      if (accuracy > best_accuracy) {
-        best_nrounds <- nrounds
-        best_accuracy <- accuracy
+      # predictions <- predict(xgb_model, newdata = X_test, weights = test_weights)
+
+      accuracy <- sum(predictions == y_test) / length(predictions)
+      
+      # Almacenar los mejores parámetros y precisión
+      if (is.null(best_params$accuracy) || accuracy > best_params$accuracy) {
+        best_params$objective_functions <- objective
+        best_params$nrounds_values <- nrounds
+        best_params$accuracy <- accuracy
       }
     }
-    
-    # Store the best parameters and accuracy for the current objective function
-    best_params[[objective]] <- list(best_nrounds = best_nrounds, best_accuracy = best_accuracy)
   }
   
-  # Return list of best parameters and accuracies for each objective function
+  # Devolver los mejores parámetros y precisión encontrados
   return(best_params)
 }
 
