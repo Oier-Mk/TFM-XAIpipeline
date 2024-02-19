@@ -24,10 +24,11 @@ grid_search <- function(train, test, y_test, support_values, confidence_values, 
       print(paste("Support:", support, "Confidence:", confidence))
 
       # Convertir el conjunto de datos de entrenamiento en transacciones
-      trans <- as(train, "transactions")
+      trans_train <- as(train, "transactions")
+      trans_test <- as(test, "transactions")
       
       # Crear la base de reglas con CARs (Classification Association Rules)
-      cars <- mineCARs(Class ~ ., trans, parameter = list(support = support, confidence = confidence))
+      cars <- mineCARs(Class ~ ., trans_train, parameter = list(support = support, confidence = confidence))
       
       # Eliminar reglas redundantes
       cars <- cars[!is.redundant(cars)]
@@ -35,32 +36,35 @@ grid_search <- function(train, test, y_test, support_values, confidence_values, 
       # Ordenar las reglas por confianza
       cars <- sort(cars, by = "conf")
       
-      # Ajustar el modelo con pesos y las reglas
+      # Ajustar el modelo con las reglas
       classifier <- CBA_ruleset(Class ~ .,
                                  rules = cars,
-                                 default = uncoveredMajorityClass(Class ~ ., trans, cars),
-                                 method = "majority",
-                                 weights = train_weights)
+                                 default = uncoveredMajorityClass(Class ~ ., trans_train, cars),
+                                 method = "majority")
       
-      # Calcular la precisión del modelo
-      trans_test <- as(test, "transactions")
-      predictions <- predict(classifier, trans_test, weights = test_weights)
-      accuracy <- sum(predictions == y_test) / length(predictions)
+      # Calcular la precisión del modelo en el conjunto de test
+      predictions_test <- predict(classifier, trans_test)
+      accuracy_test <- sum(predictions_test == y_test) / length(predictions_test)
+      
+      # Calcular la precisión del modelo en el conjunto de entrenamiento
+      predictions_train <- predict(classifier, trans_train)
+      accuracy_train <- sum(predictions_train == train$Class) / length(predictions_train)
 
       # Verificar si hay reglas antes de crear el dataframe result
       if (length(cars) > 0){
         result <- data.frame(Support = support,
                             Confidence = confidence,
-                            Accuracy = accuracy,
+                            Accuracy_train = accuracy_train,
+                            Accuracy_test = accuracy_test,
                             NumberOfRules = length(cars))
         all_results <- rbind(all_results, result)
       }
       
       # Almacenar los mejores parámetros y precisión
-      if (is.null(best_params$accuracy) || accuracy > best_params$accuracy) {
+      if (is.null(best_params$accuracy) || accuracy_test > best_params$accuracy) {
         best_params$support <- support
         best_params$confidence <- confidence
-        best_params$accuracy <- accuracy
+        best_params$accuracy <- accuracy_test
       }
     }
   }
@@ -71,8 +75,6 @@ grid_search <- function(train, test, y_test, support_values, confidence_values, 
   # Devolver los mejores parámetros y precisión encontrados
   return(best_params)
 }
-
-
 # # Example values for the grid search
 # support_values <- seq(0.01, 0.1, by = 0.01)
 # confidence_values <- seq(0.01, 0.1, by = 0.01)
@@ -109,15 +111,15 @@ extract_rules <- function(classifier, test) {
   
     rules
 }
-  # Function to filter rules based on a given statement
-  # 
-  # Args:
-  #   rules: Dataframe containing association rules
-  #   statement: Statement to filter rules by
-  # 
-  # Returns:
-  #   Subset of rules dataframe that satisfies the given statement
-  # 
+# Function to filter rules based on a given statement
+# 
+# Args:
+#   rules: Dataframe containing association rules
+#   statement: Statement to filter rules by
+# 
+# Returns:
+#   Subset of rules dataframe that satisfies the given statement
+# 
 get_used_rules <- function(rules, statement) {
   # Create conditions for filtering rules based on the statement
   conditions <- lapply(colnames(statement), function(colname) {
