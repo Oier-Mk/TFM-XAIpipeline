@@ -14,6 +14,7 @@
 grid_search <- function(train, test, y_test, support_values, confidence_values, train_weights = NULL, test_weights = NULL) {
   # Inicializar variables para almacenar los mejores parámetros y precisión
   best_params <- list()
+  all_results <- data.frame() # Crear un dataframe vacío para almacenar todos los resultados
   
   # Búsqueda en cuadrícula para cada valor de soporte
   for (support in support_values) {
@@ -45,6 +46,15 @@ grid_search <- function(train, test, y_test, support_values, confidence_values, 
       trans_test <- as(test, "transactions")
       predictions <- predict(classifier, trans_test, weights = test_weights)
       accuracy <- sum(predictions == y_test) / length(predictions)
+
+      # Verificar si hay reglas antes de crear el dataframe result
+      if (length(cars) > 0){
+        result <- data.frame(Support = support,
+                            Confidence = confidence,
+                            Accuracy = accuracy,
+                            NumberOfRules = length(cars))
+        all_results <- rbind(all_results, result)
+      }
       
       # Almacenar los mejores parámetros y precisión
       if (is.null(best_params$accuracy) || accuracy > best_params$accuracy) {
@@ -54,6 +64,9 @@ grid_search <- function(train, test, y_test, support_values, confidence_values, 
       }
     }
   }
+  
+  # Guardar todos los resultados en un archivo CSV
+  write.csv(all_results, file = "grid_search_results.csv", row.names = FALSE)
   
   # Devolver los mejores parámetros y precisión encontrados
   return(best_params)
