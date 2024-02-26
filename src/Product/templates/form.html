@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Application Form</title>
+</head>
+<body>
+
+  <form action="/sendApplication" method="post">
+    <label for="status">Status of Existing Checking Account:</label><br>
+    <select id="status" name="status">
+        <option value="< 0 DM", selected>< 0 DM</option>
+        <option value="0 - 200 DM">0 - 200 DM</option>
+        <option value="no checking account">No checking account</option>
+        <option value=">= 200 DM">>= 200 DM</option>
+    </select><br><br>
+
+    <label for="duration">Duration in Month:</label><br>
+    <select id="duration" name="duration">
+        <option value="(3~12]", selected>(3~12]</option>
+        <option value="(30~72]">(30~72]</option>
+        <option value="(15~24]">(15~24]</option>
+        <option value="(24~30]">(24~30]</option>
+        <option value="(12~15]">(12~15]</option>
+    </select><br><br>
+
+    <label for="credit_history">Credit History:</label><br>
+    <select id="credit_history" name="credit_history">
+        <option value="critical account", selected>Critical account</option>
+        <option value="existing credits paid">Existing credits paid</option>
+        <option value="delay in paying">Delay in paying</option>
+        <option value="no credits/all paid">No credits/all paid</option>
+        <option value="all credits paid">All credits paid</option>
+    </select><br><br>
+
+    <label for="purpose">Purpose:</label><br>
+    <select id="purpose" name="purpose">
+        <option value="radio/television", selected>Radio/Television</option>
+        <option value="education">Education</option>
+        <option value="furniture/equipment">Furniture/Equipment</option>
+        <option value="car (new)">Car (New)</option>
+        <option value="car (used)">Car (Used)</option>
+        <option value="business">Business</option>
+        <option value="domestic appliances">Domestic Appliances</option>
+        <option value="repairs">Repairs</option>
+        <option value="others">Others</option>
+        <option value="retraining">Retraining</option>
+    </select><br><br>
+
+    <label for="credit_amount">Credit Amount:</label><br>
+    <select id="credit_amount" name="credit_amount">
+        <option value="(249~1.26e+03]", selected>(249~1.26e+03]</option>
+        <option value="(4.72e+03~1.84e+04]">(4.72e+03~1.84e+04]</option>
+        <option value="(1.91e+03~2.85e+03]">(1.91e+03~2.85e+03]</option>
+        <option value="(2.85e+03~4.72e+03]">(2.85e+03~4.72e+03]</option>
+        <option value="(1.26e+03~1.91e+03]">(1.26e+03~1.91e+03]</option>
+    </select><br><br>
+
+    <label for="savings">Savings Account Bonds:</label><br>
+    <select id="savings" name="savings">
+        <option value="unknown/no savings", selected>Unknown/No savings</option>
+        <option value="< 100 DM">< 100 DM</option>
+        <option value="500 - 1000 DM">500 - 1000 DM</option>
+        <option value=">= 1000 DM">>= 1000 DM</option>
+        <option value="100 - 500 DM">100 - 500 DM</option>
+    </select><br><br>
+
+    <label for="employment_since">Present Employment Since:</label><br>
+    <select id="employment_since" name="employment_since">
+        <option value=">= 7 years", selected>>= 7 years</option>
+        <option value="1 - 4 years">1 - 4 years</option>
+        <option value="4 - 7 years">4 - 7 years</option>
+        <option value="unemployed">Unemployed</option>
+        <option value="< 1 year">< 1 year</option>
+    </select><br><br>
+
+    <label for="installment_rate">Installment Rate in Percentage of Disposable Income:</label><br>
+    <select id="installment_rate" name="installment_rate">
+        <option value="(3~4]", selected>(3~4]</option>
+        <option value="(0~2]">(0~2]</option>
+        <option value="(2~3]">(2~3]</option>
+    </select><br><br>
+
+    <label for="debtors">Other Debtors/Guarantors:</label><br>
+    <select id="debtors" name="debtors">
+        <option value="none", selected>None</option>
+        <option value="guarantor">Guarantor</option>
+        <option value="co-applicant">Co-applicant</option>
+    </select><br><br>
+
+    <label for="residence_since">Present Residence Since:</label><br>
+    <select id="residence_since" name="residence_since">
+        <option value="(2~4]", selected>(2~4]</option>
+        <option value="(0~2]">(0~2]</option>
+    </select><br><br>
+
+    <label for="property">Property:</label><br>
+    <select id="property" name="property">
+        <option value="real estate", selected>Real Estate</option>
+        <option value="building society savings">Building Society Savings</option>
+        <option value="unknown/no property">Unknown/No Property</option>
+        <option value="car or other">Car or Other</option>
+    </select><br><br>
+
+    <label for="age">Age in Years:</label><br>
+    <select id="age" name="age">
+        <option value="(45~75]", selected>(45~75]</option>
+        <option value="(18~26]">(18~26]</option>
+        <option value="(36~45]">(36~45]</option>
+        <option value="(30~36]">(30~36]</option>
+        <option value="(26~30]">(26~30]</option>
+    </select><br><br>
+
+    <label for="other_plans">Other Installment Plans:</label><br>
+    <select id="other_plans" name="other_plans">
+        <option value="none", selected>None</option>
+        <option value="bank">Bank</option>
+        <option value="stores">Stores</option>
+    </select><br><br>
+
+    <label for="housing">Housing:</label><br>
+    <select id="housing" name="housing">
+        <option value="own", selected>Own</option>
+        <option value="for free">For Free</option>
+        <option value="rent">Rent</option>
+    </select><br><br>
+
+    <label for="existing_credits">Number of Existing Credits at This Bank:</label><br>
+    <select id="existing_credits" name="existing_credits">
+        <option value="(0~2]", selected>(0~2]</option>
+        <option value="(2~4]">(2~4]</option>
+    </select><br><br>
+
+    <label for="job">Job:</label><br>
+    <select id="job" name="job">
+        <option value="skilled employee", selected>Skilled Employee</option>
+        <option value="unskilled resident">Unskilled Resident</option>
+        <option value="management/self-employed">Management/Self-Employed</option>
+        <option value="unemployed/non-resident">Unemployed/Non-Resident</option>
+    </select><br><br>
+
+    <label for="maintenance_people">Number of People Being Liable to Provide Maintenance For:</label><br>
+    <select id="maintenance_people" name="maintenance_people">
+        <option value="(0~2]", selected>(0~2]</option>
+    </select><br><br>
+
+    <label for="telephone">Telephone:</label><br>
+    <select id="telephone" name="telephone">
+        <option value="yes~ registered", selected>Yes, Registered</option>
+        <option value="none">None</option>
+    </select><br><br>
+
+    <label for="foreign_worker">Foreign Worker:</label><br>
+    <select id="foreign_worker" name="foreign_worker">
+        <option value="yes", selected>Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <label for="gender">Gender:</label><br>
+    <select id="gender" name="gender">
+        <option value="male", selected>Male</option>
+        <option value="female">Female</option>
+    </select><br><br>
+
+    <label for="marital_status">Marital Status:</label><br>
+    <select id="marital_status" name="marital_status">
+        <option value="single", selected>Single</option>
+        <option value="divorced/separated/married">Divorced/Separated/Married</option>
+        <option value="divorced/separated">Divorced/Separated</option>
+        <option value="married/widowed">Married/Widowed</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
