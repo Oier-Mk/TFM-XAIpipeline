@@ -20,6 +20,9 @@ set.seed(123)
 #   A list containing transactions, rules, weights, and a sample from the testing set
 # 
 init_model <- function(data, split_ratio, support, confidence) {
+
+  warnings("Beware that you are using an AI model and that human supervision is necessary to make decisions.")
+
   #### Read filtered file
   data <- read.csv(data, header = TRUE, sep = ",")
 

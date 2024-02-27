@@ -1,4 +1,5 @@
 import pandas as pd
+import warnings
 import rpy2.robjects as robjects
 from rpy2.robjects import pandas2ri
 
@@ -8,18 +9,21 @@ pandas2ri.activate()
 
 def initialize(data, train_size, support, confidence):
     """
-    Initializes a model by calling the init_model function in R and extracting 
+    Initializes a model by calling the init_model function in R and extracting
     transactions, rules, and weights.
     
     Args:
-        data (str): File path of the filtered data.
-        train_size (float): Ratio to split the data into training and testing sets.
-        support (float): Minimum support threshold for CARs (Classification Association Rules).
+        data (str): File path of the filtered data. train_size (float): Ratio to
+        split the data into training and testing sets. support (float): Minimum
+        support threshold for CARs (Classification Association Rules).
         confidence (float): Minimum confidence threshold for CARs.
         
     Returns:
         tuple: A tuple containing transactions, rules, and weights.
     """
+
+    warnings.warn("Beware that you are using an AI model and that human supervision is necessary to make decisions.")
+
     # Call init_model function in R
     l = robjects.r['init_model'](data, train_size, support, confidence)
     
