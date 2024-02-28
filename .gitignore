@@ -4,3 +4,5 @@
 .vscode/
 #ignore the pychache files pyc
 **.pyc
+#ignore the json files
+**.json
