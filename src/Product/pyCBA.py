@@ -7,7 +7,7 @@ robjects.r.source("rCBA.R", encoding="UTF-8")
 pandas2ri.activate()
 
 
-def initialize(data, train_size, support, confidence):
+def init_model(data, train_size, support, confidence):
     """
     Initializes a model by calling the init_model function in R and extracting
     transactions, rules, and weights.
@@ -36,7 +36,7 @@ def initialize(data, train_size, support, confidence):
 
 
 
-def predict(transactions, rules, weights, to_predict, get_rules=False):
+def predict_model(transactions, rules, weights, to_predict, get_rules=False):
     """
     Makes predictions using a classification model based on association rules.
     
@@ -70,7 +70,7 @@ def predict(transactions, rules, weights, to_predict, get_rules=False):
 
 if __name__ == "__main__":
 
-    transactions, rules, weights = initialize("../data/Statlog_rCBA.csv", 0.7,0.01, 0.01)
+    transactions, rules, weights = init_model("../data/Statlog_rCBA.csv", 0.7,0.01, 0.01)
 
     df = pd.DataFrame({
         'Status.of.existing.checking.account': ['< 0 DM'],
@@ -95,5 +95,5 @@ if __name__ == "__main__":
         'Marital.Status': ['single']
     })
 
-    p = predict(transactions, rules, weights, df, True)
+    p = predict_model(transactions, rules, weights, df, True)
     print(p)

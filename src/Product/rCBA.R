@@ -1,7 +1,8 @@
-library(tidyverse)
-library(caret)
-library(arulesCBA)
-library(jsonlite)
+
+suppressPackageStartupMessages(library(tidyverse))
+suppressPackageStartupMessages(library(caret))
+suppressPackageStartupMessages(library(arulesCBA))
+suppressPackageStartupMessages(library(jsonlite))
 source("utils.R")
 
 #### Asignación de la semilla
@@ -33,7 +34,7 @@ init_model <- function(data, split_ratio, support, confidence) {
   model <- create_model(data$train, support, confidence, data$weights)
 
   # Return a list containing transactions, rules, weights, and a sample from the testing set
-  list(transactions = model$transactions, rules = model$rules, weights = data$weights, test_sample = data$test[1, ])
+  list(transactions = model$transactions, rules = model$rules, weights = data$weights)
 }
 
 
@@ -78,3 +79,34 @@ predict_model <- function(transactions, rules, weights, to_predict, get_rules = 
   list(prediction = prediction, rules = rules_used)
 }
 
+if (!interactive()) {
+  
+    # Initializing with provided parameters
+    model <- init_model("../data/Statlog_rCBA.csv", 0.7, 0.01, 0.01)
+    # Creating dataframe
+    df <- data.frame(
+      'Status.of.existing.checking.account' = c('< 0 DM'),
+      'Duration.in.month' = c('(3~12]'),
+      'Credit.history' = c('critical account'),
+      'Purpose' = c('radio/television'),
+      'Credit.amount' = c('(249~1.26e+03]'),
+      'Savings.account.bonds' = c('unknown/no savings'),
+      'Present.employment.since' = c('>= 7 years'),
+      'Installment.rate.in.percentage.of.disposable.income' = c('(3~4]'),
+      'Other.debtors...guarantors' = c('none'),
+      'Present.residence.since' = c('(2~4]'),
+      'Age.in.years' = c('(45~75]'),
+      'Other.installment.plans' = c('none'),
+      'Housing' = c('own'),
+      'Number.of.existing.credits.at.this.bank' = c('(0~2]'),
+      'Job' = c('skilled employee'),
+      'Number.of.people.being.liable.to.provide.maintenance.for' = c('(0~2]'),
+      'Telephone' = c('yes~ registered'),
+      'Foreign.worker' = c('yes'),
+      'Gender' = c('male'),
+      'Marital.Status' = c('single')
+    )
+    # Predicting
+    p <- predict_model(model$transactions, model$rules, model$weights, df, TRUE)
+    print(p$prediction)
+}
