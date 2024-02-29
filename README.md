@@ -8,21 +8,30 @@ Este proyecto, titulado TFG-XAIpipeline, se enfoca en el desarrollo de una herra
 
 Los objetivos principales de este proyecto son:
 
-1. **Adquisición de Dataset Aceptación/Denegación de Créditos Bancarios**: Seleccionar un dataset adecuado que contenga información sobre la aceptación o denegación de créditos bancarios, considerado un caso de alto riesgo y con salida binaria (aceptado o denegado).
+- [x] 1. **Adquisición de Dataset Aceptación/Denegación de Créditos Bancarios**: Seleccionar un dataset adecuado que contenga información sobre la aceptación o denegación de créditos bancarios, considerado un caso de alto riesgo y con salida binaria (aceptado o denegado).
 
-2. **Preprocesamiento No Sesgado según Directrices Legales**: Implementar un preprocesamiento de datos que no esté sesgado y que cumpla con las directrices marcadas por la ley. Se utilizará un algoritmo de IBM, una librería llamada AI Fairness 360, debido a su capacidad para mitigar el sesgo y garantizar la equidad en los datos de entrenamiento.
+- [x] 2. **Preprocesamiento No Sesgado según Directrices Legales**: Implementar un preprocesamiento de datos que no esté sesgado y que cumpla con las directrices marcadas por la ley. Se utilizará un algoritmo de IBM, una librería llamada AI Fairness 360, debido a su capacidad para mitigar el sesgo y garantizar la equidad en los datos de entrenamiento.
 
-3. **Modelado con XGBoost y rCBA**: Utilizar los algoritmos XGBoost y rCBA para el modelado de los datos. XGBoost es seleccionado por su eficacia y amplia adopción en la comunidad de machine learning, mientras que rCBA es útil por su trazabilidad y transparencia.
+- [x] 3. **Modelado con XGBoost y rCBA**: Utilizar los algoritmos XGBoost y rCBA para el modelado de los datos. XGBoost es seleccionado por su eficacia y amplia adopción en la comunidad de machine learning, mientras que rCBA es útil por su trazabilidad y transparencia.
 
-4. **Alineación de la Precisión del Modelo rCBA con XGBoost**: Estudiar las posibles diferencias entre los modelos obtenidos con XGBoost y rCBA, y buscar maneras de asemejar el valor de precisión del modelo rCBA al de XGBoost, asegurando que la diferencia sea menor al 10%.
+- [x] 4. **Alineación de la Precisión del Modelo rCBA con XGBoost**: Estudiar las posibles diferencias entre los modelos obtenidos con XGBoost y rCBA, y buscar maneras de asemejar el valor de precisión del modelo rCBA al de XGBoost, asegurando que la diferencia sea menor al 10%.
 
-5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
+- [x] 5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
 
-6. **Justificación para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
+- [ ] 6. **Trabajo a Futuro para Comercialización**: Especificar el trabajo futuro necesario para la comercialización del modelo, considerando aspectos teóricos y legales establecidos por la ley. Esto podría incluir la realización de pruebas adicionales, la optimización del modelo para diversos contextos y la documentación detallada sobre su funcionamiento y aplicaciones éticas.
+  - [x] Documentación técnica
+  - [x] Requerimientos del programa y versiones
+  - [x] Instalación
+  - [ ] Sistema de gestión de riesgos
+  - [ ] Plan de seguimiento posterior
+  - [ ] Declaración de conformidad
+  - [ ] Marcado de conformidad
 
-7. **Trabajo a Futuro para Comercialización**: Especificar el trabajo futuro necesario para la comercialización del modelo, considerando aspectos teóricos y legales establecidos por la ley. Esto podría incluir la realización de pruebas adicionales, la optimización del modelo para diversos contextos y la documentación detallada sobre su funcionamiento y aplicaciones éticas.
+- [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
-8. **Impacto Ético y Legal de la Comercialización del Modelo de IA**: Realizar un estudio exhaustivo sobre las implicaciones éticas y legales de comercializar un modelo de IA de este estilo, abordando preocupaciones relacionadas con la privacidad, la equidad y el cumplimiento normativo.
+- [ ] 8. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
+
+- [ ] 9. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias. 
 
 ## Estructura del Repositorio
 
