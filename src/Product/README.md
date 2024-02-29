@@ -41,14 +41,14 @@ Para acceder desde R, se debe ejecutar el script `rCBA.R` en la carpeta `src/Pro
 Rscript rCBA.R 
 ```
 
-De esta manera se ejecutará el ejemplo hecho en R que hay en el `main`.
+De esta manera se ejecutará el ejemplo hecho en R que hay en la función `main`.
 
 Para acceder desde python, se debe ejecutar el script `pythonCBA.py` en la carpeta `src/Product/` de la siguiente manera:
 
 ```bash
 python pyCBA.py
 ```
-De esta manera se ejecutará el ejemplo hecho en python que hay en el `main`.
+De esta manera se ejecutará el ejemplo hecho en python que hay en la función `main`.
 
 Este ejemplo sencillo puede sustituirse llamando a las funciones `init_model` y `predict_model` en este orden con los datos que se deseen.
 

@@ -45,6 +45,14 @@ Codirector del Trabajo de fin de master: Francisco Herrera[^1] es un catedrátic
 
 Coddirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
 
+Colaborador: Iñaki Sasia[^3], es un Ingeniero Informático y antiguo profesor en la Universidad de Deusto. Además, ha dirigido proyectos tecnológicos tanto para el sector privado como para la Administración Pública. Su colaboración se ha centrado en la formulación de presupuestos precisos y documentación espeífica. 
+
+Colaboradora: Demelsa Benito[^4], es doctora de Derecho penal en la Universidad de Deusto y profesora de Derecho penal y Criminología. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
+
+Colaborador: Jose Luis Retolaza[^5], es doctor en Ciencias Económicas y Empresariales y profesor de la Universidad de Deusto. Su colaboración se ha centrado en el análisis del valor generado con un sistema de inteligencia artificial de caja blanca frente a los modelos de caja negra.
+
 [^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
 [^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
-
+[^3]: [Iñaki Sasia - LinkedIn](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
+[^4]: [Demelsa Benito - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/1657/investigador)
+[^5]: [Jose Luis Retolaza - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/57912/investigador)
