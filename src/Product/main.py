@@ -19,8 +19,8 @@ async def application_form(request: Request):
 
 
 
-from pyCBA import predict, initialize
-transactions, rules, weights = initialize("../data/Statlog_rCBA.csv", 0.7,0.01, 0.01)
+from pyCBA import predict_model, init_model
+transactions, rules, weights = init_model("../data/Statlog_rCBA.csv", 0.7,0.01, 0.01)
 
 @app.post("/sendApplication")
 async def send_application(
@@ -73,7 +73,7 @@ async def send_application(
         'Marital.Status': [marital_status]
     })
     
-    prediction, r = predict(transactions, rules, weights, df, True)
+    prediction, r = predict_model(transactions, rules, weights, df, True)
     print("Prediction:", prediction)
     print("Rules:", r)
 
