@@ -18,20 +18,20 @@ Los objetivos principales de este proyecto son:
 
 - [x] 5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
 
-- [ ] 6. **Trabajo a Futuro para Comercialización**: Especificar el trabajo futuro necesario para la comercialización del modelo, considerando aspectos teóricos y legales establecidos por la ley. Esto podría incluir la realización de pruebas adicionales, la optimización del modelo para diversos contextos y la documentación detallada sobre su funcionamiento y aplicaciones éticas.
+- [ ] 8. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
+
   - [x] Documentación técnica
   - [x] Requerimientos del programa y versiones
   - [x] Instalación
-  - [ ] Sistema de gestión de riesgos
+  - [x] Sistema de gestión de riesgos
   - [ ] Plan de seguimiento posterior
-  - [ ] Declaración de conformidad
-  - [ ] Marcado de conformidad
+  - [x] Declaración de conformidad
+  - [x] Marcado de conformidad
+  - [ ] Sistema de gestión de calidad
 
-- [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
+- [ ] 7. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
 
-- [ ] 8. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
-
-- [ ] 9. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias. 
+- [ ] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias. 
 
 ## Estructura del Repositorio
 
