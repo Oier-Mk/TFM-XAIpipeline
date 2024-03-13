@@ -24,10 +24,13 @@ Los objetivos principales de este proyecto son:
   - [x] Requerimientos del programa y versiones
   - [x] Instalación
   - [x] Sistema de gestión de riesgos
-  - [ ] Plan de seguimiento posterior
+  - [x] Plan de seguimiento posterior
+    - [ ] Generar un buen informe cada X iteraciones
   - [x] Declaración de conformidad
   - [x] Marcado de conformidad
   - [x] Sistema de gestión de calidad
+  - [x] Registro del sistema
+    - [ ] Punto 5 y 6
 
 - [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
