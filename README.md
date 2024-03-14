@@ -1,4 +1,4 @@
-# TFM-XAIpipeline
+# TFM-XAIpipeline & XaiCreditCopilot
 
 ## Descripción del Proyecto
 
@@ -19,9 +19,6 @@ Los objetivos principales de este proyecto son:
 - [x] 5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
 
 - [ ] 6. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
-
-- [ ] Cambiar nombre del producto a 'XaiCreditCopilot'
-
 
   - [x] Documentación técnica
   - [x] Requerimientos del programa y versiones
