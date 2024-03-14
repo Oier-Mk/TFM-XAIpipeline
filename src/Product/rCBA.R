@@ -6,7 +6,6 @@ suppressPackageStartupMessages(library(jsonlite))
 suppressPackageStartupMessages(library(lubridate))
 source("utils.R")
 source("log.R")
-source("seg_posterior.R")
 
 #### Asignación de la semilla
 
@@ -72,13 +71,6 @@ predict_model <- function(transactions, rules, weights, to_predict, get_rules = 
 
   # Log input, output, and rules
   log(to_predict, prediction, rules_used)
-
-  detect_consecutive()
-
-  if (unlist(fromJSON("log.json", simplifyVector = TRUE)$output) %% 10 == 0) {
-    credit_statistics()
-    plot_credit_outputs()
-  } 
 
   # Conditionally return rules
   if (!get_rules) {

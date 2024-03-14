@@ -6,9 +6,9 @@
 # Returns:
 #   None
 # 
-detect_consecutive <- function() {
+detect_consecutive <- function(log_file) {
   # Read the log file
-  log_data <- jsonlite::fromJSON("log.json", simplifyVector = TRUE)
+  log_data <- jsonlite::fromJSON(log_file, simplifyVector = TRUE)
   
   # Extract the classes from the last 3 entries
   last_classes <- unlist(tail(log_data, 10)$output)
@@ -27,8 +27,8 @@ detect_consecutive <- function() {
 # Returns:
 #   A list containing the mean time, mean days, mean months, mean year, proportion of approved credits, and proportion of denied credits
 # 
-credit_statistics <- function() {
-    log_data <- fromJSON("log.json", simplifyVector = TRUE)
+credit_statistics <- function(log_file) {
+    log_data <- fromJSON(log_file, simplifyVector = TRUE)
     # Convert time strings to POSIXct objects
     times <- as.POSIXct(unlist(log_data$time), format = "%Y-%m-%d %H:%M:%S")
     
@@ -76,9 +76,9 @@ credit_statistics <- function() {
 # Returns:
 #   None
 # 
-plot_credit_outputs <- function() {
+plot_credit_outputs <- function(log_file) {
     # Leer el archivo JSON
-    log_data <- fromJSON('log.json', simplifyVector = TRUE)
+    log_data <- fromJSON(log_file, simplifyVector = TRUE)
     
     # Extraer los tiempos y los outputs
     times <- unlist(log_data$time)
@@ -95,14 +95,4 @@ plot_credit_outputs <- function() {
     
     # Guardar el gráfico como una foto
     ggsave('statistics.png', plot = p, device = "png")
-}
-
-
-if (!interactive()) {
-    suppressPackageStartupMessages(library(lubridate))
-    suppressPackageStartupMessages(library(jsonlite))
-    suppressPackageStartupMessages(library(ggplot2))
-    detect_consecutive()
-    credit_statistics()
-    plot_credit_outputs()
 }

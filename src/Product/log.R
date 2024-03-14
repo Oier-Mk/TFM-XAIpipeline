@@ -1,3 +1,5 @@
+source("seg_posterior.R")
+
 # Function to log input, output, and rules into a JSON file
 # 
 # Args:
@@ -9,28 +11,59 @@
 #   None
 # 
 log <- function(input, output, rules) {
+  # Get current date
+  current_date <- as.Date(Sys.time())
+  
+  # Check if there are existing log files
+  log_files <- list.files("log", pattern = "*.json", full.names = TRUE)
+  
+  if (length(log_files) > 0) {
+    # Find the most recent log file
+    most_recent_file <- log_files[which.max(file.mtime(log_files))]
+    
+    # Extract the date from the filename
+    filename_date <- gsub("log_|\\.json", "", basename(most_recent_file))
+    
+    # Convert the filename date to Date object
+    file_date <- as.Date(filename_date, format = "%Y-%m-%d")
+    
+    # Check if the most recent log file is less than 30 days old
+    if (current_date - file_date <= 30) {
+      log_file <- most_recent_file
+    } else {
+      # If more than 30 days have passed, create a new log file with the current date
+      log_file <- paste("log/log_", format(Sys.time(), "%Y-%m-%d"), ".json", sep="")
+    }
+  } else {
+    # If no existing log files, create a new log file with the current date
+    log_file <- paste("log/log_", format(Sys.time(), "%Y-%m-%d"), ".json", sep="")
+  }
+  
   # Combine input, output, and rules into a list with current timestamp
   combined_list <- list(time = Sys.time(), input = input, output = output, rules = rules)
   
   # Convert the combined list to JSON format
   new_json_string <- toJSON(combined_list)
   
-  # Check if the file exists
-  if (file.exists("log.json")) {
+  # Write the JSON data to the log file
+  if (file.exists(log_file)) {
     # Read existing JSON data
-    existing_data <- paste(readLines("log.json"), collapse = "")
+    existing_data <- paste(readLines(log_file), collapse = "")
     # Remove the closing bracket "]" if it exists
     if (endsWith(existing_data, "]")) {
       existing_data <- substr(existing_data, 1, nchar(existing_data) - 1)
     }
-    # Append a comma before writing the new JSON data
-    write(paste0(existing_data, ",", new_json_string, "]"), "log.json")
-  } else {
-    # Create a new file and write the JSON array
-    write(paste0("[", new_json_string, "]"), "log.json")
+        # Append a comma before writing the new JSON data
+    write(paste0(existing_data, ",", new_json_string, "]"), log_file)
+    } else {
+    # If the file does not exist, create a new file and write the JSON array
+    write(paste0("[", new_json_string, "]"), log_file)
   }
-  
+
+  detect_consecutive(log_file)
+
+  if (length(unlist(fromJSON(log_file, simplifyVector = TRUE)$output)) %% 10 == 0) {
+    credit_statistics(log_file)
+    plot_credit_outputs(log_file)
+  } 
 }
-
-
-
