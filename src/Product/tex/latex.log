@@ -1,0 +1,36 @@
+Rc files read:
+  NONE
+Latexmk: This is Latexmk, John Collins, 31 Jan. 2024. Version 4.83.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  tex/2024-03-14.tex
+Category 'changed_user':
+  tex/2024-03-14.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  --interaction=nonstopmode -recorder -output-directory="pdf"  "tex/2024-03-14.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./tex/2024-03-14.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/local/texlive/2024/texmf-dist/tex/latex/base/minimal.cls
+Document Class: minimal 2001/05/25 Standard LaTeX minimal class
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+ (pdf/2024-03-14.aux) [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/upd
+map/pdftex.map}] (pdf/2024-03-14.aux) )</usr/local/texlive/2024/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on pdf/2024-03-14.pdf (1 page, 13652 bytes).
+Transcript written on pdf/2024-03-14.log.
+Latexmk: Getting log file 'pdf/2024-03-14.log'
+Latexmk: Examining 'pdf/2024-03-14.fls'
+Latexmk: Examining 'pdf/2024-03-14.log'
+Latexmk: Log file says output to 'pdf/2024-03-14.pdf'
+Latexmk: All targets (pdf/2024-03-14.pdf) are up-to-date
+
