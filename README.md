@@ -35,9 +35,9 @@ Los objetivos principales de este proyecto son:
 
 - [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
-- [ ] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
+- [*] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
   - [x] Presupuesto completo
-  - [ ] Presupuesto sin aplicar la ley
+  - [x] Presupuesto sin aplicar la ley
   - [ ] Valor generado
 
 ## Estructura del Repositorio
@@ -48,12 +48,6 @@ El repositorio está organizado de la siguiente manera:
 - **src/**: Contiene el código fuente del generador de conjuntos de datos.
 - **tests/**: Contiene los casos de prueba para validar el funcionamiento del generador.
 - **README.md**: Este archivo que proporciona una visión general del proyecto y las instrucciones para su uso.
-
-## Uso
-
-Para utilizar el generador de conjuntos de datos, sigue las instrucciones detalladas en la documentación proporcionada en el directorio 'docs'. Asegúrate de cumplir con todas las regulaciones y requisitos legales aplicables antes de utilizar este software en un entorno de producción.
-
-[ ] TODO
 
 ## Contribución
 
