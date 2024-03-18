@@ -64,7 +64,7 @@ Colaborador: Alfonso Peralta[^6], es un juez con experiencia en Inteligencia Art
 
 [^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
 [^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
-[^3]: [Iñaki Sasia - LinkedIn](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
+[^3]: [Iñaki Sasia - Universidad de Deusto](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
 [^4]: [Demelsa Benito - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/1657/investigador)
 [^5]: [Jose Luis Retolaza - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/57912/investigador)
 [^6]: [Alfonso Peralta - Universidad de Granada](https://www.linkedin.com/in/a-peralta/?originalSubdomain=es)
