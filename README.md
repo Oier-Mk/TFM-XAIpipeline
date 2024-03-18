@@ -31,6 +31,7 @@ Los objetivos principales de este proyecto son:
   - [x] Marcado de conformidad
   - [x] Sistema de gestión de calidad
   - [x] Registro del sistema
+    - [ ] Organismo a notificar y certificado de ello A51, 5 y 6
 
 - [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
@@ -52,7 +53,7 @@ El repositorio está organizado de la siguiente manera:
 
 Codirector del Trabajo de fin de master: Francisco Herrera[^1] es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’.
 
-Codirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
+Coddirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
 
 Colaborador: Iñaki Sasia[^3], es un Ingeniero Informático y antiguo profesor en la Universidad de Deusto. Además, ha dirigido proyectos tecnológicos tanto para el sector privado como para la Administración Pública. Su colaboración se ha centrado en la formulación de presupuestos precisos y documentación espeífica. 
 
@@ -60,8 +61,11 @@ Colaboradora: Demelsa Benito[^4], es doctora de Derecho penal en la Universidad 
 
 Colaborador: Jose Luis Retolaza[^5], es doctor en Ciencias Económicas y Empresariales y profesor de la Universidad de Deusto. Su colaboración se ha centrado en el análisis del valor generado con un sistema de inteligencia artificial de caja blanca frente a los modelos de caja negra.
 
+Colaborador: Alfonso Peralta[^6], es un juez con experiencia en Inteligencia Artificial. Entre sus logros, destaca su participación como codirector del curso “El derecho y la Inteligencia artificial” organizado por el Consejo General del Poder Judicial y la Universidad de Granada. Además, está involucrado en el máster “Digital Law and Business Tech” de la Escuela de Dirección y Altos Estudios.
+
 [^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
 [^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
 [^3]: [Iñaki Sasia - LinkedIn](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
 [^4]: [Demelsa Benito - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/1657/investigador)
 [^5]: [Jose Luis Retolaza - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/57912/investigador)
+[^6]: [Alfonso Peralta - Universidad de Granada](https://www.linkedin.com/in/a-peralta/?originalSubdomain=es)
