@@ -33,6 +33,8 @@ log <- function(input, output, rules) {
     } else {
       # If more than 30 days have passed, create a new log file with the current date
       log_file <- paste("log/log_", format(Sys.time(), "%Y-%m-%d"), ".json", sep="")
+      print('Realizar el informe del mes anterior')
+      print(file_date)
     }
   } else {
     # If no existing log files, create a new log file with the current date
@@ -59,11 +61,5 @@ log <- function(input, output, rules) {
     # If the file does not exist, create a new file and write the JSON array
     write(paste0("[", new_json_string, "]"), log_file)
   }
-
   detect_consecutive(log_file)
-
-  if (length(unlist(fromJSON(log_file, simplifyVector = TRUE)$output)) %% 10 == 0) {
-    credit_statistics(log_file)
-    plot_credit_outputs(log_file)
-  } 
 }
