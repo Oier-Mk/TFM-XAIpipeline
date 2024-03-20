@@ -60,7 +60,7 @@ Colaboradora: Demelsa Benito[^4], es doctora de Derecho penal en la Universidad 
 
 Colaborador: Jose Luis Retolaza[^5], es doctor en Ciencias Económicas y Empresariales y profesor de la Universidad de Deusto. Su colaboración se ha centrado en el análisis del valor generado con un sistema de inteligencia artificial de caja blanca frente a los modelos de caja negra.
 
-Colaborador: Alfonso Peralta[^6], es un juez con experiencia en Inteligencia Artificial. Entre sus logros, destaca su participación como codirector del curso “El derecho y la Inteligencia artificial” organizado por el Consejo General del Poder Judicial y la Universidad de Granada. Además, está involucrado en el máster “Digital Law and Business Tech” de la Escuela de Dirección y Altos Estudios.
+Colaborador: Alfonso Peralta[^6], es un juez con experiencia en Inteligencia Artificial. Entre sus logros, destaca su participación como codirector del curso “El derecho y la Inteligencia artificial” organizado por el Consejo General del Poder Judicial y la Universidad de Granada. Además, está involucrado en el máster “Digital Law and Business Tech” de la Escuela de Dirección y Altos Estudios. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
 
 [^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
 [^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
