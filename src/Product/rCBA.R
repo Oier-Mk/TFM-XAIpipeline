@@ -5,7 +5,6 @@ suppressPackageStartupMessages(library(arulesCBA))
 suppressPackageStartupMessages(library(jsonlite))
 suppressPackageStartupMessages(library(lubridate))
 source("utils.R")
-source("log.R")
 
 #### Asignación de la semilla
 
