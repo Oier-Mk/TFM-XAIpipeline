@@ -436,7 +436,7 @@ Gracias por confiar en nuestro sistema para el análisis y evaluación de crédi
         log_file.write(string)
 
 
-def write(date):    
+def export(date):    
     """
     Compiles the LaTeX file corresponding to the specified date into a PDF.
     
@@ -471,4 +471,4 @@ def create_report(date):
     create(date, n_inferences, percentage)
     
     # Compile LaTeX report
-    write(date)
+    export(date)

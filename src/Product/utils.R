@@ -295,7 +295,7 @@ log <- function(input, output, rules) {
     if (endsWith(existing_data, "]")) {
       existing_data <- substr(existing_data, 1, nchar(existing_data) - 1)
     }
-        # Append a comma before writing the new JSON data
+    # Append a comma before writing the new JSON data
     write(paste0(existing_data, ",", new_json_string, "]"), log_file)
     } else {
     # If the file does not exist, create a new file and write the JSON array
