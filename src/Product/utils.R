@@ -1,6 +1,3 @@
-suppressPackageStartupMessages(library(reticulate))
-use_condaenv(condaenv = "xai", required = TRUE)
-source_python("report.py")
 # Function to perform a grid search on a CBA classifier
 # 
 # Args:
@@ -274,6 +271,7 @@ log <- function(input, output, rules) {
       # If more than 30 days have passed, create a new log file with the current date
       log_file <- paste("log/log_", format(Sys.time(), "%Y-%m-%d"), ".json", sep="")
       print('Realizar el informe del mes anterior')
+      source("report.R")
       create_report(date)
     }
   } else {
