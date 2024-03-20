@@ -96,4 +96,316 @@ if __name__ == "__main__":
     })
 
     p = predict_model(transactions, rules, weights, df, True)
-    print(p)
+    print("1 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['no checking account'],
+        'Duration.in.month': ['(12~15]'],
+        'Credit.history': ['delay in paying'],
+        'Purpose': ['car (used)'],
+        'Credit.amount': ['(4.72e+03~1.84e+04]'],
+        'Savings.account.bonds': ['unknown/no savings'],
+        'Present.employment.since': ['1 - 4 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(0~2]'],
+        'Other.debtors...guarantors': ['co-applicant'],
+        'Present.residence.since': ['(0~2]'],
+        'Age.in.years': ['(30~36]'],
+        'Other.installment.plans': ['stores'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(2~4]'],
+        'Job': ['unskilled resident'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['none'],
+        'Foreign.worker': ['yes'],
+        'Gender': ['male'],
+        'Marital.Status': ['divorced/separated']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("2 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(24~30]'],
+        'Credit.history': ['all credits paid'],
+        'Purpose': ['education'],
+        'Credit.amount': ['(1.26e+03~1.91e+03]'],
+        'Savings.account.bonds': ['>= 1000 DM'],
+        'Present.employment.since': ['>= 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(45~75]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['management/self-employed'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['female'],
+        'Marital.Status': ['married/widowed']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("3 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['0 - 200 DM'],
+        'Duration.in.month': ['(15~24]'],
+        'Credit.history': ['no credits/all paid'],
+        'Purpose': ['furniture/equipment'],
+        'Credit.amount': ['(1.91e+03~2.85e+03]'],
+        'Savings.account.bonds': ['100 - 500 DM'],
+        'Present.employment.since': ['4 - 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(3~4]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(26~30]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['skilled employee'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['yes'],
+        'Gender': ['female'],
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("4 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(30~72]'],
+        'Credit.history': ['existing credits paid'],
+        'Purpose': ['car (new)'],
+        'Credit.amount': ['(2.85e+03~4.72e+03]'],
+        'Savings.account.bonds': ['500 - 1000 DM'],
+        'Present.employment.since': ['4 - 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['guarantor'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(36~45]'],
+        'Other.installment.plans': ['bank'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['skilled employee'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['male'],
+        'Marital.Status': ['married/widowed']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("5 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['0 - 200 DM'],
+        'Duration.in.month': ['(3~12]'],
+        'Credit.history': ['critical account'],
+        'Purpose': ['domestic appliances'],
+        'Credit.amount': ['(1.26e+03~1.91e+03]'],
+        'Savings.account.bonds': ['unknown/no savings'],
+        'Present.employment.since': ['>= 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(3~4]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(0~2]'],
+        'Age.in.years': ['(45~75]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(2~4]'],
+        'Job': ['management/self-employed'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['female'],
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("6 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(24~30]'],
+        'Credit.history': ['no credits/all paid'],
+        'Purpose': ['repairs'],
+        'Credit.amount': ['(249~1.26e+03]'],
+        'Savings.account.bonds': ['500 - 1000 DM'],
+        'Present.employment.since': ['< 1 year'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(26~30]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['skilled employee'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['male'],  # Added a possible value for completeness
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("7 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['< 0 DM'],
+        'Duration.in.month': ['(30~72]'],  # Assuming inf represents values greater than 72 months
+        'Credit.history': ['delay in paying'],
+        'Purpose': ['business'],
+        'Credit.amount': ['(4.72e+03~1.84e+04]'],  # Assuming inf represents very high loan amounts
+        'Savings.account.bonds': ['unknown/no savings'],
+        'Present.employment.since': ['>= 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(0~2]'],
+        'Other.debtors...guarantors': ['co-applicant'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(36~45]'],
+        'Other.installment.plans': ['stores'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(2~4]'],
+        'Job': ['management/self-employed'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['none'],
+        'Foreign.worker': ['yes'],
+        'Gender': ['male'],
+        'Marital.Status': ['divorced/separated']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("8 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(12~15]'],
+        'Credit.history': ['all credits paid'],
+        'Purpose': ['retraining'],
+        'Credit.amount': ['(1.26e+03~1.91e+03]'],
+        'Savings.account.bonds': ['>= 1000 DM'],
+        'Present.employment.since': ['unemployed'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(45~75]'],  # Assuming inf represents ages over 65
+        'Other.installment.plans': ['none'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['unemployed/non-resident'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['female'],
+        'Marital.Status': ['married/widowed']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("9 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['0 - 200 DM'],
+        'Duration.in.month': ['(30~72]'],
+        'Credit.history': ['no credits/all paid'],
+        'Purpose': ['domestic appliances'],
+        'Credit.amount': ['(1.91e+03~2.85e+03]'],
+        'Savings.account.bonds': ['100 - 500 DM'],
+        'Present.employment.since': ['4 - 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(3~4]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(30~36]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['skilled employee'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],  # Assuming inf represents a high number of dependents
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['female'],
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("10 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['0 - 200 DM'],
+        'Duration.in.month': ['(15~24]'],
+        'Credit.history': ['no credits/all paid'],
+        'Purpose': ['furniture/equipment'],
+        'Credit.amount': ['(1.26e+03~1.91e+03]'],
+        'Savings.account.bonds': ['100 - 500 DM'],
+        'Present.employment.since': ['< 1 year'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(3~4]'],
+        'Other.debtors...guarantors': ['co-applicant'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(18~26]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['rent'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['unskilled resident'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['male'],
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("11 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(24~30]'],
+        'Credit.history': ['existing credits paid'],
+        'Purpose': ['others'],
+        'Credit.amount': ['(2.85e+03~4.72e+03]'],
+        'Savings.account.bonds': ['500 - 1000 DM'],
+        'Present.employment.since': ['4 - 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(0~2]'],
+        'Age.in.years': ['(36~45]'],
+        'Other.installment.plans': ['stores'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['skilled employee'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['male'],
+        'Marital.Status': ['married/widowed']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("12 finished")
+
+    df = pd.DataFrame({
+        'Status.of.existing.checking.account': ['>= 200 DM'],
+        'Duration.in.month': ['(3~12]'],
+        'Credit.history': ['all credits paid'],
+        'Purpose': ['radio/television'],
+        'Credit.amount': ['(249~1.26e+03]'],
+        'Savings.account.bonds': ['>= 1000 DM'],
+        'Present.employment.since': ['>= 7 years'],
+        'Installment.rate.in.percentage.of.disposable.income': ['(2~3]'],
+        'Other.debtors...guarantors': ['none'],
+        'Present.residence.since': ['(2~4]'],
+        'Age.in.years': ['(45~75]'],
+        'Other.installment.plans': ['none'],
+        'Housing': ['own'],
+        'Number.of.existing.credits.at.this.bank': ['(0~2]'],
+        'Job': ['management/self-employed'],
+        'Number.of.people.being.liable.to.provide.maintenance.for': ['(0~2]'],
+        'Telephone': ['yes~ registered'],
+        'Foreign.worker': ['no'],
+        'Gender': ['female'],
+        'Marital.Status': ['single']
+    })
+
+    p = predict_model(transactions, rules, weights, df, True)
+    print("13 finished")
