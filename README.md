@@ -39,7 +39,7 @@ Los objetivos principales de este proyecto son:
 - [x] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
   - [x] Presupuesto completo
   - [x] Presupuesto sin aplicar la ley
-  - [ ] Valor generado
+  - [x] Valor generado
 
 ## Estructura del Repositorio
 
