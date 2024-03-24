@@ -1,21 +1,25 @@
 read_log <- function(date) {
   # Load required packages
   library(jsonlite)
-  
+
   # Convert date to string in 'YYYY-MM-DD' format
   date <- format(date, "%Y-%m-%d")
-  
+
   # Read JSON file
   file_path <- paste0('log/log_', date, '.json')
   data <- fromJSON(file_path)
 
   # get the percentage of approved credits
-  n_inferences <- length(data$time)
+  n_inferences <- length(data$output)
   approved  <- sum(data$output == 2)
   percentage <- as.integer(approved / n_inferences * 100)
-  
+
+  print(paste("Total inferences:", n_inferences))
+  print(paste("Percentage of approved credits:", percentage, "%"))
+
   return(list(inferences = data, n_inferences = n_inferences, percentage = percentage))
 }
+
 gender_credits <- function(data) {
   # Extract Gender information from data
   genders <- sapply(data$input, function(sublist) sublist$Gender)
@@ -33,8 +37,11 @@ gender_credits <- function(data) {
   total_male <- sum(male_counts)
   total_female <- sum(female_counts)
 
+  # Calculate the values porcentually
+
+
   # Set up the plot
-  png("tex/media/gender.png", width=800, height=400)  # Adjust width and height as needed
+  png("gender.png", width=800, height=400)  # Adjust width and height as needed
   par(mfrow=c(1, 2), mar=c(1, 1, 3, 3))  # Set up the layout and margins
 
   # Plot for males
@@ -50,90 +57,169 @@ gender_credits <- function(data) {
   # Save the plot
   dev.off()
 }
+
+gender_credits <- function(data) {
+  # Extract Gender information from data
+  genders <- sapply(data$input, function(sublist) sublist$Gender)
+  outputs <- unlist(data$output)
+
+  # Get the corresponding outputs for "male" and "female"
+  male_amounts <- unlist(outputs[genders == "male"])
+  female_amounts <- unlist(outputs[genders == "female"])
+
+  # Count the occurrences of each amount for males and females
+  male_counts <- table(male_amounts)
+  female_counts <- table(female_amounts)
+
+  # Calculate the total number of males and females
+  total_male <- sum(male_counts)
+  total_female <- sum(female_counts)
+
+  # Calculate the values proportionally
+  male_percentages <- prop.table(male_counts) * 100
+  female_percentages <- prop.table(female_counts) * 100
+
+  # Set up the plot
+  png("tex/media/gender.png", width=800, height=400)  # Adjust width and height as needed
+  par(mfrow=c(1, 2), mar=c(1, 1, 3, 3))  # Set up the layout and margins
+
+  # Plot for males
+  pie(male_counts, main="Male", col=c("#9966ff", "#99ccff"), labels=c("Denied", "Accepted"))
+  legend("topright", legend = c("Denied", "Accepted"), fill = c("#9966ff", "#99ccff"))
+  text(x=0, y=-0.9, labels=paste("Total Males:", total_male, "(", round(male_percentages[1], 2), "% Denied, ", round(male_percentages[2], 2), "% Accepted)"), cex=0.8)
+
+  # Plot for females
+  pie(female_counts, main="Female", col=c("#ff6666", "#ff99cc"), labels=c("Denied", "Accepted"))
+
+  # Add rectangle to indicate protected attribute
+  rect(xleft = -3.5, xright = 3.5, ybottom = -3.5, ytop = 3.5, col = rgb(0, 1, 0, 0.1), border = NA)
+
+  legend("topright", legend = c("Denied", "Approved", "Protected Attribute"), fill = c("#ff6666", "#99ff99", rgb(0, 1, 0, 0.2)), title = "Legend")
+  text(x=0, y=-0.9, labels=paste("Total Females:", total_female, "(", round(female_percentages[1], 2), "% Denied, ", round(female_percentages[2], 2), "% Accepted)"), cex=0.8)
+
+  # Save the plot
+  dev.off()
+}
+
 foreign_credits <- function(data) {
   # Extract marital status and outputs from data
   categories <- sapply(data$input, function(sublist) sublist$`Foreign.worker`)
   outputs <- unlist(data$output)
 
-
   # Replace '/' with newline character
   categories <- gsub("/", "\n", categories)
-  
+
   # Create a data frame with categories and outputs
   data_df <- data.frame(Category = categories, Output = outputs)
 
   # Count occurrences of each output value for each category
   count_data <- table(data_df$Category, data_df$Output)
 
-  # transpose the data for plotting
+  # Transpose the data for plotting
   count_data <- t(count_data)
+
+  # Calculate row sums (totals) for percentages
+  row_sums <- apply(count_data, 1, sum)
+
+  # Calculate percentages
+  count_data_percent <- prop.table(count_data, margin = 1) * 100
 
   png("tex/media/foreign.png", width=400, height=400)  # Adjust width and height as needed
   # Plot the barplot
-  barplot(as.matrix(count_data), beside = TRUE, 
-          col = c("#ff6666", "#99ff99"), 
-          main = "Counts of outputs by category",
-          xlab = "Category", ylab = "Count",
+  barplot(as.matrix(count_data_percent), beside = TRUE,
+          col = c("#ff6666", "#99ff99"),
+          main = "Percentage of outputs by category",
+          xlab = "Category", ylab = "Percentage",
           legend = c("Denied", "Approved"))
+
+  # Add rectangle to indicate protected attribute
+  rect(xleft = 8.75 , xright = 3.75, ybottom = -5, ytop = 100, col = rgb(0, 1, 0, 0.2), border = NA)
+
+  # Add protected attribute to legend
+  legend("topright", legend = c("Denied", "Approved", "Protected Attribute"), fill = c("#ff6666", "#99ff99", rgb(0, 1, 0, 0.2)), title = "Legend")
+
   dev.off()
 }
+
 marital_credits <- function(data) {
   # Extract marital status and outputs from data
   categories <- sapply(data$input, function(sublist) sublist$`Marital.Status`)
   outputs <- unlist(data$output)
 
-
   # Replace '/' with newline character
   categories <- gsub("/", "\n", categories)
-  
+
   # Create a data frame with categories and outputs
   data_df <- data.frame(Category = categories, Output = outputs)
 
   # Count occurrences of each output value for each category
   count_data <- table(data_df$Category, data_df$Output)
 
-  # transpose the data for plotting
+  # Transpose the data for plotting
   count_data <- t(count_data)
 
-  png("tex/media/marital.png", width=400, height=400)  # Adjust width and height as needed
-  # Plot the barplot
-  barplot(as.matrix(count_data), beside = TRUE, 
-          col = c("#ff6666", "#99ff99"), 
-          main = "Counts of outputs by category",
-          xlab = "Category", ylab = "Count",
-          legend = c("Denied", "Approved"))
-  dev.off()
+  # Calculate column-wise percentages
+  col_percentages <- prop.table(count_data, margin = 2) * 100
 
+  png("tex/media/marital.png", width=600, height=400)  # Adjust width and height as needed
+  par(mar=c(5, 4, 4, 6))  # Adjust the margin to accommodate the legend
+
+  # Plot the barplot with percentages
+  barplot(as.matrix(col_percentages), beside = TRUE,
+          col = c("#ff6666", "#99ff99"),
+          main = "Percentage of outputs by marital status",
+          xlab = "Marital Status", ylab = "Percentage",
+          legend = c("Denied", "Approved"))
+
+  # Add rectangles to indicate protected attribute
+  rect(xleft = 0, xright = 3.5, ybottom = 0, ytop = 100, col = rgb(0, 1, 0, 0.2), border = NA)
+  rect(xleft = 6.5, xright = 10, ybottom = 0, ytop = 100, col = rgb(0, 1, 0, 0.2), border = NA)
+
+  # Add protected attribute to legend
+  legend("topright", legend = c("Denied", "Approved", "Protected Attribute"), fill = c("#ff6666", "#99ff99", rgb(0, 1, 0, 0.2)), title = "Legend")
+
+  dev.off()
 }
+
 job_credits <- function(data) {
-  # Extract marital status and outputs from data
+  # Extract job categories and outputs from data
   categories <- sapply(data$input, function(sublist) sublist$Job)
   outputs <- unlist(data$output)
 
-
-  # Replace '/' with newline character
-  categories <- gsub("/", "\n", categories)
+  # Replace spaces with newline character
   categories <- gsub(" ", "\n", categories)
-  
+
   # Create a data frame with categories and outputs
   data_df <- data.frame(Category = categories, Output = outputs)
 
   # Count occurrences of each output value for each category
   count_data <- table(data_df$Category, data_df$Output)
 
-  # transpose the data for plotting
+  # Transpose the data for plotting
   count_data <- t(count_data)
 
-  png("tex/media/jobs.png", width=400, height=400)  # Adjust width and height as needed
-  # Plot the barplot
-  barplot(as.matrix(count_data), beside = TRUE, 
-          col = c("#ff6666", "#99ff99"), 
-          main = "Counts of outputs by category",
-          xlab = "Category", ylab = "Count",
-          legend = c("Denied", "Approved"))
-  dev.off()
+  # Calculate row-wise percentages
+  row_percentages <- prop.table(count_data, margin = 1) * 100
 
+  png("tex/media/jobs.png", width=600, height=400)  # Adjust width and height as needed
+  par(mar=c(5, 4, 4, 6))  # Adjust the margin to accommodate the legend
+
+  # Plot the barplot with percentages
+  barplot(as.matrix(row_percentages), beside = TRUE,
+          col = c("#ff6666", "#99ff99"),
+          main = "Percentage of outputs by job category",
+          xlab = "Job Category", ylab = "Percentage")
+
+  # Add rectangles to indicate protected attribute
+  rect(xleft = 6.5, xright = 9.5, ybottom = 0, ytop = 100, col = rgb(0, 1, 0, 0.2), border = NA)
+  rect(xleft = 9.5, xright = 15, ybottom = 0, ytop = 100, col = rgb(0, 1, 0, 0.2), border = NA)
+
+  # Add protected attribute to legend in a margin
+  legend("topright", legend = c("Denied", "Approved", "Protected Attribute"), fill = c("#ff6666", "#99ff99", rgb(0, 1, 0, 0.2)), title = "Legend", xpd = TRUE)
+
+  dev.off()
 }
+
 credit_inference <- function(data) {
   dates <- unlist(data$time)
   outputs <- as.numeric(unlist(data$output))
@@ -146,8 +232,8 @@ credit_inference <- function(data) {
 
   # Create the bar chart
   png("tex/media/sequence.png", width=800, height=400)
-  barplot(outputs, names.arg=dates, col=colors, 
-          xlab='Time', ylab='Denied or Approved', 
+  barplot(outputs, names.arg=dates, col=colors,
+          xlab='Time', ylab='Denied or Approved',
           main='Inferences over time')
 
   # Update legend
@@ -155,6 +241,8 @@ credit_inference <- function(data) {
 
   dev.off()
 }
+
+
 create_latex_document <- function(date, n_inferences, percentage) {
   # Open the file for writing  
   date <- format(date, "%Y-%m-%d")
@@ -301,7 +389,11 @@ create_report <- function(date) {
   create_latex_document(date, read_data$n_inferences, read_data$percentage)
   compile_latex_to_pdf(date)
 }
-# if (!interactive()) {
-#     date <- as.Date("2024-03-20")
-#     create_report(date)
-# }
+
+if (!interactive()) {
+    suppressPackageStartupMessages(library(reticulate))
+    # create a date object with 2024-03-14
+    date <- as.Date("2024-03-24")
+    create_report(date)
+    print("Report created successfully!")
+}
