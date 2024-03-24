@@ -21,11 +21,14 @@ Los objetivos principales de este proyecto son:
 - [ ] 6. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
 
   - [x] Documentación técnica
+    - [ ] Flowchart 2.B
+    - [ ] Sequence diagram 2.C
   - [x] Requerimientos del programa y versiones
   - [x] Instalación
   - [x] Sistema de gestión de riesgos
   - [x] Plan de seguimiento posterior
     - [ ] Notificación de fallos e incidentes graves A62
+    - [ ] Especificar tareas
   - [x] Declaración de conformidad
   - [x] Marcado de conformidad
   - [x] Sistema de gestión de calidad
