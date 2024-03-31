@@ -22,7 +22,7 @@ Los objetivos principales de este proyecto son:
 
   - [x] Documentación técnica
     - [X] Flowchart 2.B
-    - [ ] Sequence diagram 2.C
+    - [x] Sequence diagram 2.C
     - [ ] Meter los diagramas en contexto
   - [x] Requerimientos del programa y versiones
   - [x] Instalación

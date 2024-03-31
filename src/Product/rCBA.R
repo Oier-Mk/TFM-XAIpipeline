@@ -17,25 +17,23 @@ set.seed(123)
 # 
 # Args:
 #   data: File path of the filtered data
-#   split_ratio: Ratio to split the data into training and testing sets
 #   support: Minimum support threshold for CARs
 #   confidence: Minimum confidence threshold for CARs
 # 
 # Returns:
 #   A list containing transactions, rules, weights, and a sample from the testing set
 # 
-init_model <- function(data, split_ratio, support, confidence) {
+init_model <- function(data, support, confidence) {
 
   warnings("Beware that you are using an AI model and that human supervision is necessary to make decisions.")
 
   #### Read filtered file
   data <- read.csv(data, header = TRUE, sep = ",")
-
-  #### Process the data
-  data <- train_test_weights_split(data, split_ratio)
+  
+  data <- mutate_all(data, as.factor)
 
   #### Create the model
-  model <- create_model(data$train, support, confidence, data$weights)
+  model <- create_model(data, support, confidence, data$weights)
 
   # Return a list containing transactions, rules, weights, and a sample from the testing set
   list(transactions = model$transactions, rules = model$rules, weights = data$weights)
