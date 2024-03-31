@@ -4,7 +4,10 @@ suppressPackageStartupMessages(library(caret))
 suppressPackageStartupMessages(library(arulesCBA))
 suppressPackageStartupMessages(library(jsonlite))
 suppressPackageStartupMessages(library(lubridate))
-source("utils.R")
+source("modules/log.R")
+source("modules/model.R")
+source("modules/report.R")
+source("modules/warnings.R")
 
 #### Asignación de la semilla
 
