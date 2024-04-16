@@ -25,7 +25,6 @@ Los objetivos principales de este proyecto son:
   - [x] Instalación
   - [x] Sistema de gestión de riesgos
   - [x] Plan de seguimiento posterior
-    - [ ] Notificación de fallos e incidentes graves A62
   - [x] Declaración de conformidad
   - [x] Marcado de conformidad
   - [x] Sistema de gestión de calidad
