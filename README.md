@@ -45,21 +45,24 @@ El repositorio está organizado de la siguiente manera:
 
 ## Contribución
 
-Codirector del Trabajo de fin de master: Francisco Herrera[^1] es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’.
+Codirector del Trabajo de fin de master: Francisco Herrera Triguero[^1] es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’.
 
 Coddirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
 
-Colaborador: Iñaki Sasia[^3], es un Ingeniero Informático y antiguo profesor en la Universidad de Deusto. Además, ha dirigido proyectos tecnológicos tanto para el sector privado como para la Administración Pública. Su colaboración se ha centrado en la formulación de presupuestos precisos y documentación espeífica. 
+Colaborador: Iñaki Sasia Santos[^3], es un Ingeniero Informático y antiguo profesor en la Universidad de Deusto. Además, ha dirigido proyectos tecnológicos tanto para el sector privado como para la Administración Pública. Su colaboración se ha centrado en la formulación de presupuestos precisos y documentación espeífica. 
 
-Colaboradora: Demelsa Benito[^4], es doctora de Derecho penal en la Universidad de Deusto y profesora de Derecho penal y Criminología. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
+Colaboradora: Demelsa Benito Sanchez[^4], es doctora de Derecho penal en la Universidad de Deusto y profesora de Derecho penal y Criminología. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
 
 Colaborador: Jose Luis Retolaza[^5], es doctor en Ciencias Económicas y Empresariales y profesor de la Universidad de Deusto. Su colaboración se ha centrado en el análisis del valor generado con un sistema de inteligencia artificial de caja blanca frente a los modelos de caja negra.
 
-Colaborador: Alfonso Peralta[^6], es un juez con experiencia en Inteligencia Artificial. Entre sus logros, destaca su participación como codirector del curso “El derecho y la Inteligencia artificial” organizado por el Consejo General del Poder Judicial y la Universidad de Granada. Además, está involucrado en el máster “Digital Law and Business Tech” de la Escuela de Dirección y Altos Estudios. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
+Colaborador: Alfonso Peralta Gutierrez[^6], es un juez con experiencia en Inteligencia Artificial. Entre sus logros, destaca su participación como codirector del curso “El derecho y la Inteligencia artificial” organizado por el Consejo General del Poder Judicial y la Universidad de Granada. Además, está involucrado en el máster “Digital Law and Business Tech” de la Escuela de Dirección y Altos Estudios. Su colaboración ha sido vital para la correcta comprensión de la Ley de Inteligencia Artificial y la Ley de Protección de Datos además de la redacción de la documentación legal.
 
-[^1]: [Francisco Herrera - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
+Colaborador: Javier Martinez Contreras[^7], es filósofo y el actual director del Centro de Ética Aplicada (CEA) de la Universidad de Deusto. Anteriormente, fue profesor de Historia de la Filosofía (Moderna y Contemporánea) y Ética en la misma universidad desde 2012. Su colbaoración se ha centrado en la comprensión ética y correcta aplicación de las tecnologías para su correcto desarrollo a nivel social, medioambiental y ético.
+
+[^1]: [Francisco Herrera Triguero - Universidad de Granada](https://www.ugr.es/personal/francisco-herrera-triguero)
 [^2]: [Pablo García Bringas - Universidad de Deusto](https://deustotech.deusto.es/member/garcia-bringas-pablo/)
-[^3]: [Iñaki Sasia - Universidad de Deusto](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
-[^4]: [Demelsa Benito - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/1657/investigador)
-[^5]: [Jose Luis Retolaza - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/57912/investigador)
-[^6]: [Alfonso Peralta - Universidad de Granada](https://www.linkedin.com/in/a-peralta/?originalSubdomain=es)
+[^3]: [Iñaki Sasia Santos - Universidad de Deusto](https://www.linkedin.com/in/i%C3%B1aki-sasia-olaz%C3%A1bal-3b3b3b3b/)
+[^4]: [Demelsa Benito Sanchez - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/1657/investigador)
+[^5]: [Jose Luis Retolaza Ábalos - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/investigadores/57912/investigador)
+[^6]: [Alfonso Peralta Gutierrez - Universidad de Granada](https://www.linkedin.com/in/a-peralta/?originalSubdomain=es)
+[^7]: [Javier Martinez Contreras - Universidad de Deusto](https://www.deusto.es/es/inicio/somos-deusto/equipo/profesores/1336/profesor))
