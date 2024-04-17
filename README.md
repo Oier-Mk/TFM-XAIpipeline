@@ -47,7 +47,7 @@ El repositorio está organizado de la siguiente manera:
 
 Codirector del Trabajo de fin de master: Francisco Herrera Triguero[^1] es un catedrático en el Departamento de Ciencias de la Computación e Inteligencia Artificial de la Universidad de Granada, y director del grupo de investigación 'Soft Computing y Sistemas de Información Inteligentes’.
 
-Coddirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
+Codirector del Trabajo de fin de master: Pablo García Bringas[^2] es Doctor Ingeniero Informático, especializado en aplicación de Inteligencia Artificial al campo de la Ciber-Seguridad. Es profesor titular de ingeniería en la Universidad de Deusto y actualmente es Vicedecano de relaciones externas, formación continua, e investigación.
 
 Colaborador: Iñaki Sasia Santos[^3], es un Ingeniero Informático y antiguo profesor en la Universidad de Deusto. Además, ha dirigido proyectos tecnológicos tanto para el sector privado como para la Administración Pública. Su colaboración se ha centrado en la formulación de presupuestos precisos y documentación espeífica. 
 
