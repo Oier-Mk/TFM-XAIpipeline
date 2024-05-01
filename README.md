@@ -2,7 +2,7 @@
 
 ## Descripción del Proyecto
 
-Este proyecto, titulado TFG-XAIpipeline, se enfoca en el desarrollo de una herramienta para generar conjuntos de datos destinados a alimentar sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la legislación europea relacionada con la protección de datos y la equidad en el procesamiento automatizado de decisiones. Con este proyecto se pretende hacer uso de la inteligencia artificial de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ para construir un sistema de alto riesto **ético, legal y transparente**.
+Este proyecto, titulado TFM-XAIpipeline, se enfoca en el desarrollo de una herramienta para generar conjuntos de datos destinados a alimentar sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad y la transparencia son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la Legislación Europea centrada en la protección de datos y la equidad en el procesamiento automatizado de decisiones. Con este proyecto se pretende definir un **workflow** para hacer uso de la inteligencia artificial. Esto se consigiue realizando un estudio de los datos con un algoritmo de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ para construir ese sistema de alto riesgo de manera **ética, legal y transparente**.
 
 ## Objetivos
 
@@ -30,7 +30,7 @@ Los objetivos principales de este proyecto son:
   - [x] Sistema de gestión de calidad
   - [x] Registro del sistema
 
-- [ ] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
+- [x] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
 - [x] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
 
