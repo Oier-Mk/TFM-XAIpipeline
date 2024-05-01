@@ -1,43 +1,24 @@
-x# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-#
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
+name: R Tests
 
-name: R_tests
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+on: [push, pull_request]
 
 jobs:
-  build:
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        r-version: ['4.1.1']
+  test:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up R ${{ matrix.r-version }}
-        uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
-        with:
-          r-version: ${{ matrix.r-version }}
-      - name: Install dependencies
-        run: |
-          install.packages('testthat')
-          # install.packages("arules")
-          # install.packages("arulesCBA")
-          # install.packages('caret', dependencies = TRUE)
-          # install.packages("tidyverse")
-        shell: Rscript {0}
-      - name: Check
-        run: rscript test/test_example.R
-        shell: Rscript {0}
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: '4.1.1'
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        Rscript -e 'install.packages("testthat")'
+
+    - name: Run tests
+      run: |
+        Rscript -e 'testthat::test_dir("test", stop_on_failure = TRUE)'
