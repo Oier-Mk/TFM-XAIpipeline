@@ -10,7 +10,7 @@ jobs:
     - name: Set up R
       uses: r-lib/actions/setup-r@v1
       with:
-        r-version: '4.1.1'
+        r-version: '4.4.0'
 
     - name: Check out code
       uses: actions/checkout@v2
