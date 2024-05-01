@@ -33,7 +33,6 @@ jobs:
       - name: Install dependencies
         run: |
           install.packages('testthat')
-          remotes::install_deps(dependencies = TRUE)
           # install.packages("arules")
           # install.packages("arulesCBA")
           # install.packages('caret', dependencies = TRUE)
