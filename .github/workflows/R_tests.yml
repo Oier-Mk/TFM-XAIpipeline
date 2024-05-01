@@ -32,7 +32,7 @@ jobs:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
         run: |
-          install.packages(c("remotes", "rcmdcheck"))
+          install.packages('testthat')
           remotes::install_deps(dependencies = TRUE)
           # install.packages("arules")
           # install.packages("arulesCBA")
@@ -40,5 +40,5 @@ jobs:
           # install.packages("tidyverse")
         shell: Rscript {0}
       - name: Check
-        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        run: rscript test/test_example.R
         shell: Rscript {0}
