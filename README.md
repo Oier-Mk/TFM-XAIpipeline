@@ -10,39 +10,39 @@ Los objetivos principales de este proyecto son:
 
 - [x] 1. **Definición de flujo de trabajo existente**: Estudio y definición de flujo de trabajo de IA como se conoce hoy día. 
 
-- [x] 1. **Lectura preliminar de IA Act**: Lectura y estudio de la Ley de Inteligencia Artificial propuesta por el Parlamento Europeo para el correcto desarroyo de del nuevo flujo de datos.
+- [x] 2. **Lectura preliminar de IA Act**: Lectura y estudio de la Ley de Inteligencia Artificial propuesta por el Parlamento Europeo para el correcto desarroyo de del nuevo flujo de datos.
 
-- [x] 1. **Estudio del estado del arte**: Recopilación de documentación, lectura y comprensión de los diferentes approaches realizados en este campo.
+- [x] 3. **Estudio del estado del arte**: Recopilación de documentación, lectura y comprensión de los diferentes approaches realizados en este campo.
 
-- [x] 1. **Diseño de flujo de trabajo**: Diseñar un flujo de trabajo detallado que incluya todas las etapas necesarias, desde la adquisición de datos hasta la implementación del modelo en producción, asegurando la transparencia, la equidad y el cumplimiento legal en cada paso.
+- [x] 4. **Diseño de flujo de trabajo**: Diseñar un flujo de trabajo detallado que incluya todas las etapas necesarias, desde la adquisición de datos hasta la implementación del modelo en producción, asegurando la transparencia, la equidad y el cumplimiento legal en cada paso.
 
-- [x] 1. **Desarrollo de ejemplo práctico**: Desarrollo de ejemplo práctico y experimentación de las diferentes fases para la correcta ilustación del flujo propuesto.
+- [x] 5. **Desarrollo de ejemplo práctico**: Desarrollo de ejemplo práctico y experimentación de las diferentes fases para la correcta ilustación del flujo propuesto.
 
-- [x] 1. **Adquisición de Dataset Aceptación/Denegación de Créditos Bancarios**: Seleccionar un dataset adecuado que contenga información sobre la aceptación o denegación de créditos bancarios, considerado un caso de alto riesgo y con salida binaria (aceptado o denegado).
+  - [x] 1. **Adquisición de Dataset Aceptación/Denegación de Créditos Bancarios**: Seleccionar un dataset adecuado que contenga información sobre la aceptación o denegación de créditos bancarios, considerado un caso de alto riesgo y con salida binaria (aceptado o denegado).
+  
+  - [x] 2. **Preprocesamiento No Sesgado según Directrices Legales**: Implementar un preprocesamiento de datos que no esté sesgado y que cumpla con las directrices marcadas por la ley. Se utilizará un algoritmo de IBM, una librería llamada AI Fairness 360, debido a su capacidad para mitigar el sesgo y garantizar la equidad en los datos de entrenamiento.
+  
+  - [x] 3. **Modelado con XGBoost y rCBA**: Utilizar los algoritmos XGBoost y rCBA para el modelado de los datos. XGBoost es seleccionado por su eficacia y amplia adopción en la comunidad de machine learning, mientras que rCBA es útil por su trazabilidad y transparencia.
+  
+  - [x] 4. **Alineación de la Precisión del Modelo rCBA con XGBoost**: Estudiar las posibles diferencias entre los modelos obtenidos con XGBoost y rCBA, y buscar maneras de asemejar el valor de precisión del modelo rCBA al de XGBoost, asegurando que la diferencia sea menor al 10%.
+  
+  - [x] 5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
+  
+  - [x] 6. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
+  
+    - [x] Documentación técnica
+    - [x] Requerimientos del programa y versiones
+    - [x] Instalación
+    - [x] Sistema de gestión de riesgos
+    - [x] Plan de seguimiento posterior
+    - [x] Declaración de conformidad
+    - [x] Marcado de conformidad
+    - [x] Sistema de gestión de calidad
+    - [x] Registro del sistema
 
-- [x] 2. **Preprocesamiento No Sesgado según Directrices Legales**: Implementar un preprocesamiento de datos que no esté sesgado y que cumpla con las directrices marcadas por la ley. Se utilizará un algoritmo de IBM, una librería llamada AI Fairness 360, debido a su capacidad para mitigar el sesgo y garantizar la equidad en los datos de entrenamiento.
+- [x] 6. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
 
-- [x] 3. **Modelado con XGBoost y rCBA**: Utilizar los algoritmos XGBoost y rCBA para el modelado de los datos. XGBoost es seleccionado por su eficacia y amplia adopción en la comunidad de machine learning, mientras que rCBA es útil por su trazabilidad y transparencia.
-
-- [x] 4. **Alineación de la Precisión del Modelo rCBA con XGBoost**: Estudiar las posibles diferencias entre los modelos obtenidos con XGBoost y rCBA, y buscar maneras de asemejar el valor de precisión del modelo rCBA al de XGBoost, asegurando que la diferencia sea menor al 10%.
-
-- [x] 5. **Resultado del Modelo rCBA y Comparación con XGBoost**: Presentar los resultados del modelo rCBA y indicar la ligera superioridad del modelo XGBoost en términos de precisión. Se debe resaltar que el modelo XGBoost corrobora en todo momento lo obtenido con rCBA.
-
-- [x] 6. **Justificación legal para Introducir el Modelo al Mercado de Alto Riesgo**: Proporcionar una fundamentación legal que respalde la introducción del modelo en un mercado de alto riesgo. Esto implica presentar medidas para mitigar riesgos, asegurar el cumplimiento legal y ético, y destacar los beneficios potenciales para los usuarios.
-
-  - [x] Documentación técnica
-  - [x] Requerimientos del programa y versiones
-  - [x] Instalación
-  - [x] Sistema de gestión de riesgos
-  - [x] Plan de seguimiento posterior
-  - [x] Declaración de conformidad
-  - [x] Marcado de conformidad
-  - [x] Sistema de gestión de calidad
-  - [x] Registro del sistema
-
-- [x] 7. **Justificación ética para Introducir el Modelo al Mercado de Alto Riesgo**: Ofrecer una justificación sobre cómo el modelo, a pesar de ser de alto riesgo, puede ser introducido al mercado. Esto podría incluir medidas de mitigación de riesgos, garantías de cumplimiento legal y ético, y beneficios potenciales para los usuarios.
-
-- [x] 8. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
+- [x] 7. **Impacto económico del uso de inteligencia artificial de caja blanca frente a caja negra**: Analizar de manera exhaustiva el uso de sistemas de inteligencia artificial caja blanca en comparación con los caja negra afecta económicamente a las empresas y las industrias.
 
 ## Estructura del Repositorio
 
