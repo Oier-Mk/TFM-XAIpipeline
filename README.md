@@ -2,11 +2,21 @@
 
 ## Descripción del Proyecto
 
-Este proyecto, titulado TFM-XAIpipeline, se enfoca en el desarrollo de una herramienta para generar conjuntos de datos destinados a alimentar sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad y la transparencia son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la Legislación Europea centrada en la protección de datos y la equidad en el procesamiento automatizado de decisiones. Con este proyecto se pretende definir un **workflow** para hacer uso de la inteligencia artificial. Esto se consigiue realizando un estudio de los datos con un algoritmo de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ para construir ese sistema de alto riesgo de manera **ética, legal y transparente**.
+Este proyecto, titulado TFM-XAIpipeline, se enfoca en el desarrollo de un **workflow** para producir sistemas de inteligencia artificial de alto riesgo. La necesidad de este tipo de herramienta surge de la creciente demanda de sistemas de IA en aplicaciones críticas, donde la precisión y la equidad y la transparencia son de suma importancia. Este proyecto se centra específicamente en asegurar que los conjuntos de datos utilizados en estos sistemas sean conformes con la Legislación Europea centrada en la protección de datos y la equidad en el procesamiento automatizado de decisiones. Esto se consigiue realizando un estudio de los datos con un algoritmo de _caja negra_ para poder obtener conclusiones e imitarla con algoritmos de _caja blanca_ para construir ese sistema de alto riesgo de manera **ética, legal y transparente**.
 
 ## Objetivos
 
 Los objetivos principales de este proyecto son:
+
+- [x] 1. **Definición de flujo de trabajo existente**: Estudio y definición de flujo de trabajo de IA como se conoce hoy día. 
+
+- [x] 1. **Lectura preliminar de IA Act**: Lectura y estudio de la Ley de Inteligencia Artificial propuesta por el Parlamento Europeo para el correcto desarroyo de del nuevo flujo de datos.
+
+- [x] 1. **Estudio del estado del arte**: Recopilación de documentación, lectura y comprensión de los diferentes approaches realizados en este campo.
+
+- [x] 1. **Diseño de flujo de trabajo**: Diseñar un flujo de trabajo detallado que incluya todas las etapas necesarias, desde la adquisición de datos hasta la implementación del modelo en producción, asegurando la transparencia, la equidad y el cumplimiento legal en cada paso.
+
+- [x] 1. **Desarrollo de ejemplo práctico**: Desarrollo de ejemplo práctico y experimentación de las diferentes fases para la correcta ilustación del flujo propuesto.
 
 - [x] 1. **Adquisición de Dataset Aceptación/Denegación de Créditos Bancarios**: Seleccionar un dataset adecuado que contenga información sobre la aceptación o denegación de créditos bancarios, considerado un caso de alto riesgo y con salida binaria (aceptado o denegado).
 
