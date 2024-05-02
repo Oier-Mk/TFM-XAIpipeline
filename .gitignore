@@ -7,3 +7,4 @@
 #ignore the json files
 **.json
 Examples.zip
+.Rproj.user
