@@ -1,0 +1,5 @@
+install.packages("testthat")
+install.packages("arules")
+install.packages("arulesCBA")
+install.packages('caret', dependencies = TRUE)
+install.packages("tidyverse")
