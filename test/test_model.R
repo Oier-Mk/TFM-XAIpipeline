@@ -21,43 +21,53 @@ test_data <- data.frame(
   stringsAsFactors = FALSE
 )
 
+# Suppress warnings within this block
+suppressWarnings({
 
-# Define tests for the create_model function
-test_that("Tests para modelo", {
+  # call the function
+  model <- create_model(test_data, support_value = 0.1, confidence_value = 0.8)
+
+  # Fit the model with weights and the rules
+  classifier <- CBA_ruleset(Class ~ .,
+                            rules = model$rules,
+                            default = uncoveredMajorityClass(Class ~ ., model$transactions, model$rules),
+                            method = "majority")
+  to_predict <- data.frame(
+    Item1 = c("Apple"),
+    Item2 = c("Orange"),
+    stringsAsFactors = FALSE
+  )
+
+  # Convert data to transactions
+  trans_predict <- as(to_predict, "transactions")
   
-  # Suppress warnings within this block
-  suppressWarnings({
-    # call the function
-    model <- create_model(test_data, support_value = 0.1, confidence_value = 0.8)
+  # Make predictions
+  prediction <- predict(classifier, trans_predict)
+  
+  rules <- extract_rules(classifier)
 
+  # Define tests for the create_model function
+  test_that("Devolución del modelo", {
     expect_equal(class(model), "list")
+  })
+
+  test_that("Número de reglas", {
     expect_equal(length(model$rules), 10)
+  })
+
+  test_that("Número de transacciones", {
     expect_equal(nrow(model$transactions), 5)
+  })
+
+  test_that("Atributos de las transacciones", {
     expect_equal(ncol(model$transactions), 12)
-    
-    # Fit the model with weights and the rules
-    classifier <- CBA_ruleset(Class ~ .,
-                              rules = model$rules,
-                              default = uncoveredMajorityClass(Class ~ ., model$transactions, model$rules),
-                              method = "majority")
-    to_predict <- data.frame(
-      Item1 = c("Apple"),
-      Item2 = c("Orange"),
-      stringsAsFactors = FALSE
-    )
-    
-    
-    # Convert data to transactions
-    trans_predict <- as(to_predict, "transactions")
-    
-    # Make predictions
-    prediction <- predict(classifier, trans_predict)
-    
+  })
+
+  test_that("Devolución del modelo", {
     expect_equal(prediction, factor("Fruit", levels = c("Fruit", "Vegetable")))
-    
-    rules <- extract_rules(classifier)
+  })
+  test_that("Devolución del modelo", {
     expect_equal(rules, read.csv("test/test_rules.csv"))
-    
   })
 })
 
