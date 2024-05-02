@@ -23,10 +23,11 @@ jobs:
 
       - name: Commit results
         run: 
+          |
           R --version 
           Rscript test/test_install.R
           Rscript test/test_model.R
-          #|
+          
           # git config --local user.email "actions@github.com"
           # git config --local user.name "GitHub Actions"
           # git add survey_data.rds
