@@ -10,7 +10,7 @@ Los objetivos principales de este proyecto son:
 
 - [x] 1. **Definición de flujo de trabajo existente**: Estudio y definición de flujo de trabajo de IA como se conoce hoy día. 
 
-- [x] 2. **Lectura preliminar de IA Act**: Lectura y estudio de la Ley de Inteligencia Artificial propuesta por el Parlamento Europeo para el correcto desarroyo de del nuevo flujo de datos.
+- [x] 2. **Lectura preliminar de IA Act**: Lectura y estudio de la Ley de Inteligencia Artificial propuesta por el Parlamento Europeo para el correcto desarrollo de del nuevo flujo de datos.
 
 - [x] 3. **Estudio del estado del arte**: Recopilación de documentación, lectura y comprensión de los diferentes approaches realizados en este campo.
 
